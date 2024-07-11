@@ -45,7 +45,7 @@ animagine: {
     guide: "-lyrics perfect by ed sheeran"
   },
   help: {
-    name: "help",
+    name: "help2",
     description: "View all commands",
     guide: "-help\n-help <command name>"
   },
@@ -68,7 +68,7 @@ animagine: {
 
 module.exports = {
   config: {
-    name: "help",
+    name: "help2",
     aliases: ["help"],
     version: 1.0,
     author: "LiANE&Coffee",
