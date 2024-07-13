@@ -7,7 +7,7 @@ module.exports = {
     author: "ARN",
     countDown: 5,
     role: 0,
-    category: "tool",
+    category: "Utility ",
   },
 
   onStart: async function ({ api, args, event }) {
