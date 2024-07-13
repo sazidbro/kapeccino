@@ -35,7 +35,7 @@ version: "1.0",
 author: "Samir OE",
 countDown: 5,
 role: 0,
-category: "𝗔𝗜"
+category: "Ai"
 },
 onStart: async function({
 message: m,
