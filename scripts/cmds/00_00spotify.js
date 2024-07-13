@@ -12,7 +12,7 @@ module.exports = {
 				countDown: 9,
 				author: "cliff",
 				shortDescription: "Search and play music from Spotify",
-				commandCategory: "Media",
+				commandCategory: "Music",
 				category: "audio",
 				hasPrefix: false,
 				usage: "[song name]",
