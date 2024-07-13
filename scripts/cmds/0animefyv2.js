@@ -11,7 +11,7 @@ module.exports = {
 		role: 0,
 		shortDescription: "convert pic into anime style",
 		longDescription: "convert pic into anime style",
-		category: "anime",
+		category: "Media",
 		guide: "{pn} anime {on img reply}"
 	},
 
