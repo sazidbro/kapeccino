@@ -4,7 +4,7 @@ module.exports = {
     author: "Samir Œ",
     countDown: 5,
     role: 0,
-    category: "write",
+    category: "Fun",
     shortDescription: {
       en: "mention your friend and write something to post✍️",
     },
