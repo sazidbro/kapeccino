@@ -7,7 +7,7 @@ module.exports = {
 		version: "1.5",
 		countDown: 5,
 		role: 0,
-		category: "GPT4",
+		category: "Ai",
 		shortDescription: {
 			en: "gpt4 Architecture "
 		}
