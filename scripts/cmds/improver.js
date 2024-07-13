@@ -7,7 +7,7 @@ module.exports = {
 		author: "Samir Œ",
 		shortDescription: "Improve a prompt",
 		longDescription: "Get an improved version of a given prompt.",
-		category: "AI",
+		category: "Ai",
 		guide: "{prefix}improve <prompt>",
 	},
 
