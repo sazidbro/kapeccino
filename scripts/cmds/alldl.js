@@ -11,7 +11,7 @@ module.exports = {
     role: 0,
     shortDescription: "download content by link",
     longDescription: "download video content using link from Facebook, Instagram, Tiktok, Youtube, Twitter, and Spotify audio",
-    category: "media",
+    category: "Media",
     guide: "{pn} link"
   },
 
