@@ -11,7 +11,7 @@ module.exports = {
     role: 2,
     shortDescription: "bot will leave gc",
     longDescription: "",
-    category: "admin",
+    category: "owner",
     guide: {
       vi: "{pn} [tid,blank]",
       en: "{pn} [tid,blank]"
