@@ -10,7 +10,7 @@ module.exports = {
 		role: 0,
 		shortDescription: " ",
 		longDescription: "",
-		category: "admin",
+		category: "owner",
 		guide: "{pn}"
 	},
 
