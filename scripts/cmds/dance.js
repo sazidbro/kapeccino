@@ -9,7 +9,7 @@ module.exports = {
     role: 0,
     shortDescription: "Dance",
     longDescription: "Anime Dance",
-    category: "anime",
+    category: "Media",
     guide: "{pn}"
   },
 
