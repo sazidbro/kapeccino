@@ -6,7 +6,7 @@ module.exports = {
     aliases: ["getcode"],
     version: "1.0",
     author: "Xyron Chen",
-		category: "Boxchat"
+		category: "owner"
   },
 
   onStart: async function ({ api, event, args }) {
