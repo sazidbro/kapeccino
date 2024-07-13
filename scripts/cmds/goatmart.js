@@ -7,7 +7,7 @@ module.exports = {
 		shortDescription: {
 			en: "View items available in the market."
 		},
-		category: "Admin",
+		category: "owner",
 		usage: "{p}market [itemID]",
 		version: "1.5",
 		role: 0,
