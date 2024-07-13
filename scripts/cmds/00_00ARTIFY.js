@@ -400,7 +400,7 @@ module.exports = {
 				author: "August Quinn",
 				shortDescription: "Font text",
 				countDown: 0,
-				category: "GRAPHIC",
+				category: "Media",
 				guide: {
 						en: '{p}Artify [fontname | textartname] [text]'
 				}
