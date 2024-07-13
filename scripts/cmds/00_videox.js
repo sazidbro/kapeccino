@@ -12,7 +12,7 @@ module.exports = {
 		author: "Samir Œ",
 		countDown: 5,
 		role: 0,
-		category: "cute",
+		category: "Media",
 	},
 
 	onStart: async function ({ api, event, message, args }) {
