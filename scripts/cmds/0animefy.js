@@ -15,7 +15,7 @@ module.exports = {
 		longDescription: {
 			en: "Anime filter"
 		},
-		category: "utility",
+		category: "Media",
 		guide: {
 			en: "{p}{n} [reply to image or image url]"
 		}
