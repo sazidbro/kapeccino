@@ -6,7 +6,7 @@ module.exports = {
 		author: 'Samir Œ',
 		shortDescription: 'Perform a Google search.',
 		longDescription: 'Performs a Google search and provides the top results.',
-		category: 'Utility',
+		category: 'Media',
 		guide: {
 			en: '{pn} [search query]',
 		},
