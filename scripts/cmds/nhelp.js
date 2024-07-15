@@ -15,7 +15,7 @@ config: {
   role: 0,
   shortDescription: "help cmd alternative",
   longDescription: "see the cmd list and its info in image",
-  category: "",
+  category: "admin",
   guide: {
     en: "{p}guide / guide {cmdname}",
   }
