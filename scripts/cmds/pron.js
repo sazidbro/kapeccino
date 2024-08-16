@@ -12,12 +12,12 @@ module.exports = {
 		name: "pron",
 		aliases: ["porn"],
 		version: "2.0",
-		author: "MR.AYAN",
+		author: "Sazid ",
 		countDown: 30,
 		role: 0,
 		shortDescription: "",
 		longDescription: "get kanda/p***n video hilake sojaa",
-		category: "𝟭𝟴+",
+		category: "18+",
 		guide: "{p}{n}",
 	},
 
@@ -27,7 +27,7 @@ module.exports = {
 		const senderID = event.senderID;
 
 		const loadingMessage = await message.reply({
-			body: "ᴡᴀɪᴛ ʙᴀʙᴜ ᴘʀᴏɴ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...🥵",
+			body: "ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ...🥵",
 		});
 
 		const link = [
@@ -161,7 +161,7 @@ module.exports = {
 
 		if (senderID !== null) {
 			message.reply({
-				body: '🥵ᴅᴏᴡɴʟᴏᴀᴅ sᴜᴄᴄᴇssғᴜʟ ᴘʀᴏɴ ᴠɪᴅᴇᴏ🥵',
+				body: '🥵ᴅᴏᴡɴʟᴏᴀᴅ sᴜᴄᴄᴇssғᴜʟ🥵',
 				attachment: await global.utils.getStreamFromURL(randomVideo),
 			});
 
