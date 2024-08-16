@@ -6,9 +6,9 @@ module.exports = {
     name: 'shell',
     aliases: ['$','>'],
     version: '1.0',
-    author: 'MR.AYAN',
+    author: 'Undefined',
     role: 2,
-    category: 'utility',
+    category: 'owner',
     shortDescription: {
       en: 'Executes terminal commands.',
     },
