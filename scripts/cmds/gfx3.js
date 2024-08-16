@@ -9,7 +9,7 @@ module.exports = {
     role: 0,
     shortDescription: "Make A gfx logo",
     longDescription: "Make A gfx logo",
-    category: "gfx",
+    category: "utility ",
     guide: {
       en: "{p}{n} name | subname",
     }
