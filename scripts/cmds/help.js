@@ -3,13 +3,13 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 𝗠𝗥.𝗔𝗬𝗔𝗡 ]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
+const doNotDelete = "[Sazid Moontasir]"; // changing this wont change the goatbot V2 of list cmd it is just a decoyy
 
 module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "𝗠𝗥.𝗔𝗬𝗔𝗡", // original author 𝗠𝗥.𝗔𝗬𝗔𝗡
+    author: "Sazid Moontasir", // original author Sazid Moontasir 
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -60,9 +60,9 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n╭─────❃[ 𝗘𝗻𝗷𝗼𝘆 ]\n│> 𝗧𝗼𝘁𝗮𝗹 𝗰𝗺𝗱𝘀: [${totalCommands}].\n│𝗧𝘆𝗽𝗲: [ ${prefix}𝗵𝗲𝗹𝗽 𝘁𝗼 \n│<𝗰𝗺𝗱> 𝘁𝗼 𝗹𝗲𝗮𝗿𝗻 𝘁𝗵𝗲 𝘂𝘀𝗮𝗴𝗲.]\n╰────────────✦`;
+      msg += `\n\n╭─────❃[ Enjoy]\n│> Total Cmds: [${totalCommands}].\n│Type: [ ${prefix}help to\n│<cmd> to learn the usage.]\n╰────────────✦`;
       msg += ``;
-      msg += `\n╭─────❃\n│🌟 | [ 𝗠𝗥.𝗔𝗬𝗔𝗡 ]\n│https://m.me/NOOBS.DEVELOPER.AYAN\n╰────────────✦`; // its not decoy so change it if you want 
+      msg += `\n╭─────❃\n│🌟 | [ Sazid Moontasir  ]\n│https://www.facebook.com/profile.php?id=100090400922934\n╰────────────✦`; // its not decoy so change it if you want 
 
 
       await message.reply({
