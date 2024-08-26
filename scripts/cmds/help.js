@@ -106,3 +106,27 @@ module.exports = {
 
         const longDescription = configCommand.longDescription
           ? configCommand.longDescription.en || "No description"
+          : "No description";
+
+        const guideBody = configCommand.guide?.en || "No guide available.";
+        const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
+
+        const boldDescription = await getFormattedText(longDescription, 'sans');
+        const boldUsage = await getFormattedText(usage, 'sans');
+        const boldCommandName = await getFormattedText(configCommand.name, 'bold');
+
+        const response = `
+╭───◊
+  │ 🔶 ${boldCommandName}
+  ├── INFO
+  │ 📝 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻: ${boldDescription}
+  │ 👑 𝗔𝘂𝘁𝗵𝗼𝗿: ${author}
+  │ ⚙️ 𝗚𝘂𝗶𝗱𝗲: ${boldUsage}
+  ╰────────────◊
+`;
+
+        await message.reply(response);
+      }
+    }
+  },
+};
