@@ -5,24 +5,22 @@ const { commands, aliases } = global.GoatBot;
 module.exports = {
   config: {
  name: "help",
-	version: "1.0.11",
-	author: {
-		name: "NTKhang",
-		contacts: ""
-	},
-	cooldowns: 5,
-	role: 0,
-	shortDescription: "Xem cách dùng lệnh",
-	longDescription: "Xem cách sử dụng của các lệnh",
-	category: "info",
-	guide: "{p}{n} [để trống|<số trang>|<tên lệnh>]",
-	priority: 1,
-	packages: "moment-timezone"
-};
-
-module.exports = {
-	config: this.config,
-	start: async function ({ globalGoat, message, args, event, threadsData, download }) {
+    version: "1.00",
+    author: "Sazid Moontasir",
+    countDown: 5,
+    shortDescription: {
+      en: "View command usage and list all commands directly",
+    },
+    longDescription: {
+      en: "View command usage and list all commands directly",
+    },
+    category: "info",
+    guide: {
+      en: "{p}help cmdName ",
+    },
+    priority: 1,
+  },
+	onStart: async function ({ globalGoat, message, args, event, threadsData, download }) {
 		const moment = require("moment-timezone");
 		const { statSync, existsSync, createReadStream } = require("fs-extra");
 		const axios = require("axios");
