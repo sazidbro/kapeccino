@@ -24,21 +24,6 @@ module.exports = {
     const { threadID } = event;
     const prefix = getPrefix(threadID);
 
-    const getFormattedText = async (text, fontType) => {
-      try {
-        const response = await axios.get('https://global-sprak.onrender.com/api/font', {
-          params: {
-            text,
-            fontType
-          }
-        });
-        return response.data.result;
-      } catch (error) {
-        console.error(`Error fetching ${fontType} text:`, error);
-        return text;
-      }
-    };
-
     if (args.length === 0) {
       const categories = {};
       let msg = "";
@@ -51,47 +36,25 @@ module.exports = {
         categories[category].push(name);
       }
 
-      const formattedCategoriesList = await Promise.all(
-        Object.keys(categories).map(async (category) => {
-          const boldCategory = await getFormattedText(category.toUpperCase(), 'bold');
-          return { category, boldCategory };
-        })
-      );
+      Object.keys(categories).forEach((category) => {
+        const categoryName = category.toUpperCase().replace(/-/g, " ");
+        msg += `\n╭──『 ${categoryName} 』`;
+        const commandsList = categories[category].map((cmd) => `✧${cmd}`).join(" ");
+        msg += `\n${commandsList}\n╰───────────◊\n`;
+      });
 
-      const formattedCommandsList = await Promise.all(
-        Object.entries(categories).map(async ([category, commands]) => {
-          const sansCommands = await Promise.all(
-            commands.map((command) => getFormattedText(command, 'sans'))
-          );
-          return { category, sansCommands };
-        })
-      );
-
-      for (const { category, boldCategory } of formattedCategoriesList) {
-        if (category !== "info") {
-          let section = `\n╭─◊『  ${boldCategory}  』`;
-
-          const commandsForCategory = formattedCommandsList.find(
-            (cmd) => cmd.category === category
-          ).sansCommands;
-          for (let i = 0; i < commandsForCategory.length; i += 2) {
-            const cmds = commandsForCategory.slice(i, i + 2).map((item) => `✧ ${item}`).join(" ");
-            section += `\n│${cmds}`;
-          }
-          section += `\n╰────────────◊`;
-
-          msg += section;
-        }
-      }
-
-      // Add footer
+      // Footer
       const totalCommands = Object.values(categories).flat().length;
-      msg += `\n╭────────────◊\n`;
-      msg += `│ » Total Commands: [ ${totalCommands} ]\n`;
+      msg += `╭────────────◊\n`;
+      msg += `│ » Type [ ${prefix}addowner] to add\n`;
+      msg += `│ » admin to your group chat.\n`;
+      msg += `│ » use [ ${prefix}support ] to join\n`;
+      msg += `│ » support group.\n`;
+      msg += `│ » Total cmds: [ ${totalCommands} ].\n`;
       msg += `│ » Type [ ${prefix}help <cmd> ]\n`;
-      msg += `│   to learn more about each command.\n`;
-      msg += `╰───────────◊\n`;
-      msg += `    「 Developed by Sazid Moontasir 」`;
+      msg += `│ to learn the usage.\n`;
+      msg += `╰────────◊\n\n`;
+      msg += `    「 🐐V2 | Levi Ackerman 」`;
 
       await message.reply({ body: msg });
     } else {
@@ -111,18 +74,14 @@ module.exports = {
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const boldDescription = await getFormattedText(longDescription, 'sans');
-        const boldUsage = await getFormattedText(usage, 'sans');
-        const boldCommandName = await getFormattedText(configCommand.name, 'bold');
-
         const response = `
-╭───◊
-  │ 🔶 ${boldCommandName}
+╭──◊
+  │ 🔶 ${configCommand.name.toUpperCase()}
   ├── INFO
-  │ 📝 𝗗𝗲𝘀𝗰𝗿𝗶𝗽𝘁𝗶𝗼𝗻: ${boldDescription}
-  │ 👑 𝗔𝘂𝘁𝗵𝗼𝗿: ${author}
-  │ ⚙️ 𝗚𝘂𝗶𝗱𝗲: ${boldUsage}
-  ╰────────────◊
+  │ 📝 Description: ${longDescription}
+  │ 👑 Author: ${author}
+  │ ⚙ Guide: ${usage}
+  ╰───────────◊
 `;
 
         await message.reply(response);
